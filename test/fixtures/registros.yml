@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: 1
+  fecha_ingreso: 2014-05-16 02:10:25
+  fecha_salida: 2014-05-16 02:10:25
+  persona: 1
+  dispositivo: 1
+  sede: 1
+  usuario: MyString
+
+two:
+  codigo: 1
+  fecha_ingreso: 2014-05-16 02:10:25
+  fecha_salida: 2014-05-16 02:10:25
+  persona: 1
+  dispositivo: 1
+  sede: 1
+  usuario: MyString

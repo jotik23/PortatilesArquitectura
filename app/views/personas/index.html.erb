@@ -1,0 +1,59 @@
+
+<div class="col-sm-12">
+
+
+    <a href="personas/new" class="btn btn-success" style=" margin-bottom: 10px; "><i class="icon-eye-open"></i> Crear Persona </a>
+
+    <section class="panel">
+        <header class="panel-heading">
+            Personas
+        </header>
+        <table class="table">
+            <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Tipo identificacion</th>
+              <th>Numero identificacion</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Celular</th>
+              <th>Correo</th>
+              <th>Fecha creacion</th>
+              <th>Estado</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @personas.each do |persona| %>
+                  
+                  <tr>
+                    <td><%= persona.codigo %></td>
+                    <td><%= persona.tipo_identificacion %></td>
+                    <td><%= persona.numero_identificacion %></td>
+                    <td><%= persona.nombres %></td>
+                    <td><%= persona.apellidos %></td>
+                    <td><%= persona.direccion %></td>
+                    <td><%= persona.telefono %></td>
+                    <td><%= persona.celular %></td>
+                    <td><%= persona.correo %></td>
+                    <td><%= persona.fecha_creacion %></td>
+                    <td><%= persona.estado %></td>
+                    <td><%= link_to 'Ver', persona, :class => 'btn btn-success btn-xs'  %></td>
+                    <td><%= link_to 'Editar', edit_persona_path(persona), :class => 'btn btn-primary btn-xs'  %></td>
+                    <td><%= link_to 'Eliminar', persona, method: :delete, data: { confirm: '¿Estas seguro?' }, :class => 'btn btn-danger btn-xs'   %></td>
+                  </tr>
+                  
+                <% end %>
+
+          </tbody>
+
+        </table>
+    </section>
+
+
+</div>
+

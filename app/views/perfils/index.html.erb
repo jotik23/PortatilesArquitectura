@@ -1,0 +1,39 @@
+
+
+<div class="col-sm-6">
+
+
+    <a href="perfils/new" class="btn btn-success" style=" margin-bottom: 10px; "><i class="icon-eye-open"></i> Crea tu perfil </a>
+
+    <section class="panel">
+        <header class="panel-heading">
+            Perfiles
+        </header>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @perfils.each do |perfil| %>
+                  <tr>
+                    <td><%= perfil.codigo %></td>
+                    <td><%= perfil.nombre %></td>
+                    <td><%= link_to 'Ver', perfil , :class => 'btn btn-success btn-xs'  %></td>
+                    <td><%= link_to 'Editar', edit_perfil_path(perfil), :class => 'btn btn-primary btn-xs' %></td>
+                    <td><%= link_to 'Eliminar', perfil, method: :delete, data: { confirm: '¿Estas seguro?' }, :class => 'btn btn-danger btn-xs' %></td>
+                  </tr>
+                <% end %>
+
+          </tbody>
+
+        </table>
+    </section>
+
+
+</div>

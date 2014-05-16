@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: 
+  nombre: MyString
+  usuario_creador: MyString
+  fecha_creacion: 2014-05-15
+  estado: MyString
+
+two:
+  codigo: 
+  nombre: MyString
+  usuario_creador: MyString
+  fecha_creacion: 2014-05-15
+  estado: MyString

@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<section class="panel">
+    <header class="panel-heading">
+        Ver registro
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@registro) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Codigo:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_codigo" name="registro[codigo]"  disabled="disabled" value="<%= @registro.codigo %>" type="number">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Fecha ingreso:</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="registro_fecha_ingreso" name="registro[fecha_ingreso]" disabled="disabled" value="<%= @registro.fecha_ingreso %>" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Fecha salida:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_fecha_salida" name="registro[fecha_salida]"  disabled="disabled" value="<%= @registro.fecha_salida %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Persona:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_persona" name="registro[persona]"  disabled="disabled" value="<%= @registro.persona %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Dispositivo:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_dispositivo" name="registro[dispositivo]"  disabled="disabled" value="<%= @registro.dispositivo %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Sede:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_sede" name="registro[sede]"  disabled="disabled" value="<%= @registro.sede %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Usuario:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="registro_usuario" name="registro[usuario]"  disabled="disabled" value="<%= @registro.usuario %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                  <br/>
+                    <%= link_to 'Editar', edit_registro_path(@registro) , :class => 'btn btn-danger'  %>
+                    <%= link_to 'Volver', registros_path , :class => 'btn btn-danger'  %>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>

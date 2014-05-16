@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<section class="panel">
+    <header class="panel-heading">
+        Ver sede
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@sede) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Codigo:</label>
+                <div class="col-lg-10">                	
+                	<input class="form-control" id="sede.codigo" name="sede[codigo]"  disabled="disabled" value="<%= @sede.codigo %>" type="number">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Descripcion:</label>
+                <div class="col-lg-10">                	
+                	<input class="form-control" id="sede.descripcion" name="sede[descripcion]"  disabled="disabled" value="<%= @sede.descripcion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Fecha creacion:</label>
+                <div class="col-lg-10">                	
+                	<input class="form-control" id="sede.fecha_creacion" name="sede[fecha_creacion]"  disabled="disabled" value="<%= @sede.fecha_creacion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Estado:</label>
+                <div class="col-lg-10">
+                	<input class="form-control" id="sede.estado" name="sede[estado]" disabled="disabled" value="<%= @sede.estado %>" type="text">
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                	<br/>
+                    <%= link_to 'Editar', edit_sede_path(@sede) , :class => 'btn btn-danger'  %>
+                    <%= link_to 'Volver', sedes_path , :class => 'btn btn-danger'  %>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>
+

@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+
+<section class="panel">
+    <header class="panel-heading">
+        Ver Persona
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@persona) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Codigo:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.codigo" name="persona[codigo]"  disabled="disabled" value="<%= @persona.codigo %>" type="number">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Tipo identificacion:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.tipo_identificacion" name="persona[tipo_identificacion]"  disabled="disabled" value="<%= @persona.tipo_identificacion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Numero identificacion:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.numero_identificacion" name="persona[numero_identificacion]"  disabled="disabled" value="<%= @persona.numero_identificacion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Nombres:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.nombres" name="persona[nombres]"  disabled="disabled" value="<%= @persona.nombres %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Apellidos:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.apellidos" name="persona[apellidos]"  disabled="disabled" value="<%= @persona.apellidos %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Direccion:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.direccion" name="persona[direccion]"  disabled="disabled" value="<%= @persona.direccion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Telefono:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.telefono" name="persona[telefono]"  disabled="disabled" value="<%= @persona.telefono %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Celular:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.celular" name="persona[celular]"  disabled="disabled" value="<%= @persona.celular %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Correo:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.correo" name="persona[correo]"  disabled="disabled" value="<%= @persona.correo %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Fecha creacion:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.fecha_creacion" name="persona[fecha_creacion]"  disabled="disabled" value="<%= @persona.fecha_creacion %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Estado:</label>
+                <div class="col-lg-10">                 
+                  <input class="form-control" id="persona.estado" name="persona[estado]"  disabled="disabled" value="<%= @persona.estado %>" type="text">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                  <br/>
+                    <%= link_to 'Editar', edit_persona_path(@persona) , :class => 'btn btn-danger'  %>
+                    <%= link_to 'Volver', personas_path , :class => 'btn btn-danger'  %>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>

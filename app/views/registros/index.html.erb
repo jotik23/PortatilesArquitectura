@@ -1,0 +1,48 @@
+
+<div class="col-sm-10">
+
+
+    <a href="registros/new" class="btn btn-success" style=" margin-bottom: 10px; "><i class="icon-eye-open"></i> Registrar acceso </a>
+
+    <section class="panel">
+        <header class="panel-heading">
+            Registros realizados
+        </header>
+        <table class="table">
+            <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Fecha ingreso</th>
+              <th>Fecha salida</th>
+              <th>Persona</th>
+              <th>Dispositivo</th>
+              <th>Sede</th>
+              <th>Usuario</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @registros.each do |registro| %>
+                  <tr>
+                    <td><%= registro.codigo %></td>
+                    <td><%= registro.fecha_ingreso %></td>
+                    <td><%= registro.fecha_salida %></td>
+                    <td><%= registro.persona %></td>
+                    <td><%= registro.dispositivo %></td>
+                    <td><%= registro.sede %></td>
+                    <td><%= registro.usuario %></td>
+                    <td><%= link_to 'Show', registro, :class => 'btn btn-success btn-xs'  %></td>
+                    <td><%= link_to 'Edit', edit_registro_path(registro), :class => 'btn btn-primary btn-xs'  %></td>
+                    <td><%= link_to 'Destroy', registro, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-xs'  %></td>
+                  </tr>
+                <% end %>
+
+          </tbody>
+
+        </table>
+    </section>
+
+
+</div>

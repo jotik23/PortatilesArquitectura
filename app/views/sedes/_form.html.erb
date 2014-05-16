@@ -1,0 +1,69 @@
+
+  <% if @sede.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sede.errors.count, "error") %> prohibited this sede from being saved:</h2>
+
+      <ul>
+      <% @sede.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<section class="panel">
+    <header class="panel-heading">
+        Editar Sede
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@sede) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label"><%= f.label :codigo %></label>
+                <div class="col-lg-10">
+                    <%= f.number_field :codigo , :class => 'form-control' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :descripcion %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :descripcion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :fecha_creacion %></label>
+                <div class="col-lg-10">
+                    <%= f.date_select :fecha_creacion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>    
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :estado %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :estado , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                    <button type="submit" class="btn btn-primary" >Guardar</button>
+                    <% if ver == "1" %>
+                      <%= link_to 'Ver', @sede , :class => 'btn btn-danger'  %>
+                    <% end %>
+                    <% if editar == "1" %>
+                      <%= link_to 'Editar', sedes_path , :class => 'btn btn-danger'  %>
+                    <% end %>
+                    <% if volver == "1" %>
+                      <%= link_to 'Volver', sedes_path , :class => 'btn btn-danger'  %>
+                    <% end %>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>
+

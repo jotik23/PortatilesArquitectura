@@ -1,0 +1,46 @@
+
+<div class="col-sm-6">
+
+
+    <a href="dispositivos/new" class="btn btn-success" style=" margin-bottom: 10px; "><i class="icon-eye-open"></i> Crea tu Dispositivo </a>
+
+    <section class="panel">
+        <header class="panel-heading">
+            Dispositivos
+        </header>
+        <table class="table">
+            <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Nombre</th>
+              <th>Usuario creador</th>
+              <th>Fecha creacion</th>
+              <th>Estado</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @dispositivos.each do |dispositivo| %>
+                  
+                  <tr>
+                    <td><%= dispositivo.codigo %></td>
+                    <td><%= dispositivo.nombre %></td>
+                    <td><%= dispositivo.usuario_creador %></td>
+                    <td><%= dispositivo.fecha_creacion %></td>
+                    <td><%= dispositivo.estado %></td>
+                    <td><%= link_to 'Ver', dispositivo , :class => 'btn btn-success btn-xs' %></td>
+                    <td><%= link_to 'Editar', edit_dispositivo_path(dispositivo), :class => 'btn btn-primary btn-xs' %></td>
+                    <td><%= link_to 'Eliminar', dispositivo, method: :delete, data: { confirm: '¿Estas seguro?' }, :class => 'btn btn-danger btn-xs'  %></td>
+                  </tr>
+                <% end %>
+
+          </tbody>
+
+        </table>
+    </section>
+
+
+</div>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: 1
+  descripcion: MyString
+  fecha_creacion: 2014-05-16
+  estado: MyString
+
+two:
+  codigo: 1
+  descripcion: MyString
+  fecha_creacion: 2014-05-16
+  estado: MyString

@@ -1,0 +1,118 @@
+
+  <% if @persona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@persona.errors.count, "error") %> prohibited this persona from being saved:</h2>
+
+      <ul>
+      <% @persona.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<section class="panel">
+    <header class="panel-heading">
+        Editar Persona
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@persona) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label"><%= f.label :codigo %></label>
+                <div class="col-lg-10">
+                    <%= f.number_field :codigo , :class => 'form-control' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :tipo_identificacion %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :tipo_identificacion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :numero_identificacion %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :numero_identificacion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :nombres %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :nombres , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :apellidos %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :apellidos , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :direccion %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :direccion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :telefono %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :telefono , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :celular %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :celular , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :correo %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :correo , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :fecha_creacion %></label>
+                <div class="col-lg-10">
+                    <%= f.date_select :fecha_creacion , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label"><%= f.label :estado %></label>
+                <div class="col-lg-10">
+                    <%= f.text_field :estado , :class => 'form-control', :style => 'margin-bottom: 10px; ' %>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                    <button type="submit" class="btn btn-primary" >Guardar</button>
+                    <% if ver == "1" %>
+                      <%= link_to 'Ver', @persona , :class => 'btn btn-danger'  %>
+                    <% end %>
+                    <% if editar == "1" %>
+                      <%= link_to 'Editar', personas_path , :class => 'btn btn-danger'  %>
+                    <% end %>
+                    <% if volver == "1" %>
+                      <%= link_to 'Volver', personas_path , :class => 'btn btn-danger'  %>
+                    <% end %>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>

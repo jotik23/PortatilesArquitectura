@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<section class="panel">
+    <header class="panel-heading">
+        Ver Dispositivo
+    </header>
+    <div class="panel-body">
+        
+          <%= form_for(@dispositivo) do |f| %>
+            <div class="form-group">
+                <label for="inputEmail1" class="col-lg-2 control-label">Codigo:</label>
+                <div class="col-lg-10">
+                  
+                  <input class="form-control" id="dispositivo_codigo" name="dispositivo[codigo]"  disabled="disabled" value="<%= @dispositivo.codigo %>" type="number">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Nombre:</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="dispositivo_nombre" name="dispositivo[nombre]" disabled="disabled" value="<%= @dispositivo.nombre %>" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Usuario creador:</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="dispositivo_usuario_creador" name="dispositivo[usuario_creador]" disabled="disabled" value="<%= @dispositivo.usuario_creador %>" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Fecha creacion:</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="dispositivo_fecha_creacion" name="dispositivo[fecha_creacion]" disabled="disabled" value="<%= @dispositivo.fecha_creacion %>" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-lg-2 control-label">Estado:</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="dispositivo_estado" name="dispositivo[estado]" disabled="disabled" value="<%= @dispositivo.estado %>" type="text">
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-lg-offset-2 col-lg-10" >
+                  <br/>
+                    <%= link_to 'Editar', edit_dispositivo_path(@dispositivo) , :class => 'btn btn-danger'  %>
+                    <%= link_to 'Volver', dispositivos_path , :class => 'btn btn-danger'  %>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<% end %>
